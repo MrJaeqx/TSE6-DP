@@ -22,10 +22,9 @@ namespace W1_Strategy
             {
                 Console.WriteLine("Error: FCFS read disk.");
                 Console.WriteLine("Press any key to exit...");
-                getChar();
+                Console.ReadKey();
                 Environment.Exit(-1);
             }
-            
         }
     }
 }
