@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
 using Timer = System.Timers.Timer;
 
@@ -17,12 +18,23 @@ namespace W1_Strategy
             Console.WriteLine("1: First-Come First-Serve");
             Console.WriteLine("2: Shortest Seek Time First");
             Console.WriteLine("3: SCAN");
-            string result = "";
             bool validChoice = false;
             int choice;
-            Console.WriteLine("Choose scheduling strategy: ");
-            result = Console.ReadLine();
-            Int32.TryParse(result, out choice);
+            do
+            {
+                Console.WriteLine("Choose scheduling strategy (1 to 3): ");
+                string consoleInput = Console.ReadLine();
+                Int32.TryParse(consoleInput, out choice);
+                if (choice >= 1 && choice <= 3)
+                {
+                    validChoice = true;
+                }
+                else
+                {
+                    Console.WriteLine("Doe dat ff niet");
+                }
+            } while (!validChoice);
+            
 
             IDiskScheduling strategy;
             switch (choice)
@@ -56,8 +68,11 @@ namespace W1_Strategy
             };
 
             timer.Start();
-            
-            //Console.WriteLine("Press any key to exit");
+
+            while (requests.Count != 0)
+            {
+                Thread.Sleep(0);
+            }
             Console.ReadKey();
         }
 
@@ -71,8 +86,9 @@ namespace W1_Strategy
             Console.WriteLine();
             if (requests.Count == 0)
             {
-                Console.WriteLine("Reading done");
                 timer.Stop();
+                Console.WriteLine("Reading done");
+                Console.WriteLine("Press any key to exit...");
             }
         }
     }
