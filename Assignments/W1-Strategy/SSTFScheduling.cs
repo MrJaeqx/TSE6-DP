@@ -21,7 +21,7 @@ namespace W1_Strategy
                 if (requests.Count > 0)
                 {
                     // find closest to number
-                    int closest = requests.OrderBy(item => Math.Abs(startItem - item)).First();
+                    int closest = requests.Aggregate((x, y) => Math.Abs(x - startItem) < Math.Abs(y - startItem) ? x : y);
                     requests.Remove(closest);
                 }             
             }
