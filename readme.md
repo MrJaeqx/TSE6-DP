@@ -1,4 +1,4 @@
-TSE Design Patterns
+TSE6 Design Patterns
 ================================================================================================================
 Minh-Triet Diep  
 Lars Jaeqx  
