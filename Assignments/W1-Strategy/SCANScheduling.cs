@@ -9,18 +9,19 @@ namespace W1_Strategy
 
     class SCANScheduling : IDiskScheduling
     {
+        private int startPos = 50;
+
+
         public void ReadDisk(List<int> requests)
         {
             try
             {
-                /*if (requests.Count > 0)
+                if (requests.Count > 0)
                 {
-                    requests.Remove(0);
+                    // find closest to startPos
+                    int closest = requests.OrderBy(item => (startPos - item) < 0 ? startPos + item : startPos - item).First();
+                    requests.Remove(closest);
                 }
-                int startNumber = 50;
-
-                // find closest to number
-                int closest = list.OrderBy(item => Math.Abs(startNumber - item)).First();*/
             }
             catch(Exception e)
             {

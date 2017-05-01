@@ -23,15 +23,6 @@ namespace W1_Strategy
             Console.WriteLine("Choose scheduling strategy: ");
             result = Console.ReadLine();
             Int32.TryParse(result, out choice);
-            //while (!Int32.TryParse(result, out choice) || !validChoice)
-            //{
-            //    Console.WriteLine("Choose scheduling strategy: ");
-            //    result = Console.ReadLine();
-            //    if (choice >= 1 && choice <= 3)
-            //    {
-            //        validChoice = true;
-            //    }
-            //}
 
             IDiskScheduling strategy;
             switch (choice)
@@ -50,7 +41,7 @@ namespace W1_Strategy
                     break;
             }
 
-            Console.Write("Using: ");
+            Console.WriteLine("Using: ");
             foreach (int request in requests)
             {
                 Console.Write(request + " ");
@@ -66,7 +57,7 @@ namespace W1_Strategy
 
             timer.Start();
             
-            Console.WriteLine("Press any key to exit");
+            //Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
 
