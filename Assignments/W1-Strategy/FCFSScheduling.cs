@@ -25,7 +25,6 @@ namespace W1_Strategy
                 Console.ReadKey();
                 Environment.Exit(-1);
             }
-            
         }
     }
 }

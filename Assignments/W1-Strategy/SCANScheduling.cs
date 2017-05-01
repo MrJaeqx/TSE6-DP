@@ -11,7 +11,24 @@ namespace W1_Strategy
     {
         public void ReadDisk(List<int> requests)
         {
-            throw new NotImplementedException();
+            try
+            {
+                /*if (requests.Count > 0)
+                {
+                    requests.Remove(0);
+                }
+                int startNumber = 50;
+
+                // find closest to number
+                int closest = list.OrderBy(item => Math.Abs(startNumber - item)).First();*/
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Error: SCAN read disk.");
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
+                Environment.Exit(-1);
+            }
         }
     }
 }
