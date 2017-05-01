@@ -11,7 +11,21 @@ namespace W1_Strategy
     {
         public void ReadDisk(List<int> requests)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (requests.Count > 0)
+                {
+                    requests.Remove(0);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Error: FCFS read disk.");
+                Console.WriteLine("Press any key to exit...");
+                getChar();
+                Environment.Exit(-1);
+            }
+            
         }
     }
 }
