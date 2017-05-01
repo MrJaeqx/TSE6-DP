@@ -15,7 +15,7 @@ namespace W1_Strategy
             {
                 if (requests.Count > 0)
                 {
-                    requests.Remove(0);
+                    requests.RemoveAt(0);
                 }
             }
             catch(Exception e)
