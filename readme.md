@@ -1,4 +1,4 @@
 TSE Design Patterns
-
-Minh-Triet Diep
-Lars Jaeqx
+================================================================================================================
+Minh-Triet Diep  
+Lars Jaeqx  
