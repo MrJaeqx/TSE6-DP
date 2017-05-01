@@ -15,14 +15,14 @@ namespace W1_Strategy
             {
                 if (requests.Count > 0)
                 {
-                    requests.Remove(0);
+                    requests.RemoveAt(0);
                 }
             }
             catch(Exception e)
             {
                 Console.WriteLine("Error: FCFS read disk.");
                 Console.WriteLine("Press any key to exit...");
-                getChar();
+                Console.ReadKey();
                 Environment.Exit(-1);
             }
             
