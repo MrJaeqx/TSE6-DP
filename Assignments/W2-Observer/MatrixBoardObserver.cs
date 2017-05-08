@@ -22,6 +22,10 @@ namespace StockMarket
             Console.WriteLine("Matrix zegt:   " + state.GetStringThing());
         }
 
-
+        public void UpdatePush(StockState s)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Matrix zegt:   " + s.GetStringThing());
+        }
     }
 }

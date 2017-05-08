@@ -20,5 +20,11 @@ namespace StockMarket
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Telefoon zegt: " + state.GetStringThing());
         }
+
+        public void UpdatePush(StockState s)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Telefoon zegt: " + s.GetStringThing());
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace StockMarket
     {
         void Update();
 
+        void UpdatePush(StockState s);
     }
 }

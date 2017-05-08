@@ -30,6 +30,8 @@ namespace StockMarket
             foreach(IObserver o in observers)
             {
                 o.Update();
+                // stel dat je data is veranderd, dan dit
+                o.UpdatePush(stockState);
             }
         }
 

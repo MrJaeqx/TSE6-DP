@@ -21,5 +21,11 @@ namespace StockMarket
             Console.WriteLine("Krant zegt:    " + state.GetStringThing());
         }
 
+        public void UpdatePush(StockState s)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Krant zegt:    " + s.GetStringThing());
+        }
+
     }
 }

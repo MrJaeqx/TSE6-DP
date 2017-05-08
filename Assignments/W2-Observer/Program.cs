@@ -21,6 +21,7 @@ namespace StockMarket
             stockSubject.Attach(matrixObserver);
             stockSubject.Attach(newspaperObserver);
 
+            Console.WriteLine("Press ESC to exit, 1 to add an observer, 2 to remove an observer");
 
             int i = 0;
             while (true)
@@ -38,7 +39,7 @@ namespace StockMarket
 
                 state.SetStringThing("Tick: " + i);
                 stockSubject.Notify();
-                Thread.Sleep(1);
+                Thread.Sleep(500);
                 i++;
             }
         }
