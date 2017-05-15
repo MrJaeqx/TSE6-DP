@@ -47,7 +47,6 @@ namespace W3_FactoryFactory
                 }
             }
 
-
             Random random = new Random();
             
             Console.WriteLine("Press Escape stop game");
@@ -68,19 +67,16 @@ namespace W3_FactoryFactory
                 }
 
                 myFigure.jump();
+                myFigure.sing();
+
+                totalSteps += random.Next(0, 150);
+                totalPoints += random.Next(1, 35);
+                
                 if (myFigure.GetType().Name.Contains("Sport"))
                 {
                     totalSteps += random.Next(0, 250);
+                    totalPoints += random.Next(1, 25);
                 }
-
-                totalSteps += random.Next(0, 250);
-
-                myFigure.sing();
-                if (myFigure.GetType().Name.Contains("Female"))
-                {
-                    totalPoints += random.Next(1, 10);
-                }
-                totalPoints += random.Next(1, 50);
                 Console.WriteLine("Points: " + totalPoints);
                 Console.WriteLine("Progress: " + totalSteps + "/" + maxSteps);
                 Console.WriteLine();
@@ -98,6 +94,7 @@ namespace W3_FactoryFactory
             {
                 prize = factory.createGadget();
                 Console.WriteLine("You won a " + prize.GetType().Name + "!!!");
+                prize.doStuff();
             }
             else
             {

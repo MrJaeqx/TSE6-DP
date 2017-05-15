@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W1-Strategy", "W1-Strategy\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W2-StockMarket", "W2-Observer\W2-StockMarket.csproj", "{E343BB36-5885-439C-BA2D-AA1A8607EFF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W3-FactoryFactory", "W3-FactoryFactory\W3-FactoryFactory.csproj", "{77472265-CCC2-42DA-967D-BFF7B4B389AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W3-AbstractFactory", "W3-AbstractFactory\W3-AbstractFactory.csproj", "{77472265-CCC2-42DA-967D-BFF7B4B389AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
