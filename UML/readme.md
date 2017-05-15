@@ -4,10 +4,10 @@ UML designs TSE6-DP
 ![Strategy classes](W1-Strategy.png)  
   
 ## Assignment 2: Observer
-![Strategy classes](W2-Observer.png)  
+![Observer classes](W2-Observer.png)  
   
 ## Assignment 3: Abstract Factory  
-todo  
+![Abstract Factory classes](W3-Abstract-Factory.png)   
   
 ## Assignment 4: Decorator  
 todo  
