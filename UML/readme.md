@@ -7,10 +7,10 @@ UML designs TSE6-DP
 ![Observer classes](W2-Observer.png)  
   
 ## Assignment 3: Abstract Factory  
-![Abstract Factory classes](W3-Abstract-Factory.png)   
+![Abstract Factory classes](W3-Abstract-Factory.png)  
   
 ## Assignment 4: Decorator  
-todo  
-  
+![Decorator classes](W4-Decorator.png)  
+
 ## Assignment 5: --
 todo  
