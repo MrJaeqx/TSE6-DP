@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W2-StockMarket", "W2-Observ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W3-AbstractFactory", "W3-AbstractFactory\W3-AbstractFactory.csproj", "{77472265-CCC2-42DA-967D-BFF7B4B389AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W4-Decorator", "W4-Decorator\W4-Decorator.csproj", "{DC84FE18-2CD3-4248-A6ED-12126469140D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{77472265-CCC2-42DA-967D-BFF7B4B389AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77472265-CCC2-42DA-967D-BFF7B4B389AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77472265-CCC2-42DA-967D-BFF7B4B389AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
