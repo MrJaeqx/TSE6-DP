@@ -9,18 +9,17 @@ namespace W4_Decorator
     {
         private ICar car;
 
-        protected CarDecorator(ICar car)
+        public CarDecorator(ICar car)
         {
             this.car = car;
         }
 
-
-        public double GetPrice()
+        public virtual double GetPrice()
         {
             return car.GetPrice();
         }
 
-        public string GetDescription()
+        public virtual string GetDescription()
         {
             return car.GetDescription();
         }

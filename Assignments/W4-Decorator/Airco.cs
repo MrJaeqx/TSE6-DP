@@ -7,25 +7,26 @@ namespace W4_Decorator
 {
     class Airco : CarDecorator
     {
-        private double price = 2000.00;
-        public Airco(Car car) : base(car)
-        {
+        private ICar car;
 
+        public Airco(ICar car) : base(car)
+        {
+            this.car = car;
         }
 
-        public new double GetPrice()
+        public override double GetPrice()
         {
-            return base.GetPrice() + price;
+            return car.GetPrice() + 2000.00;
         }
 
-        public new string GetDescription()
+        public override string GetDescription()
         {
-            return base.GetDescription() + " with Airco";
+            return car.GetDescription() + " + airco";
         }
 
         public string Chill()
         {
-            return "Fwoooooooooooooooo";
+            return "Setting to 16c";
         }
     }
 }

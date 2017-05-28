@@ -4,7 +4,5 @@
     {
         double GetPrice();
         string GetDescription();
-
-
     }
 }

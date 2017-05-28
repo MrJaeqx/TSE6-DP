@@ -13,24 +13,21 @@ namespace W4_Decorator
     {
         static void Main(string[] args)
         {
-            Car regularCar = new Car();
+            RegularCar regularCar = new RegularCar();
+            System.Console.WriteLine("1: " + regularCar.GetDescription());
+            System.Console.WriteLine("$: " + regularCar.GetPrice());
+
             Airco aircoCar = new Airco(regularCar);
+            System.Console.WriteLine("2: " + aircoCar.GetDescription());
+            System.Console.WriteLine("$: " + aircoCar.GetPrice());
+
             Stereo stereoCar = new Stereo(regularCar);
-            Stereo bothOptions = new Stereo(aircoCar); //  why doesn't this work???
+            System.Console.WriteLine("3: " + stereoCar.GetDescription());
+            System.Console.WriteLine("$: " + stereoCar.GetPrice());
 
-            System.Console.WriteLine("Regular car price: " + regularCar.GetPrice() + "\n");
-            System.Console.WriteLine("\t\t " + regularCar.GetDescription() + "\n");
-
-            System.Console.WriteLine("Regular car /w airco: " + aircoCar.GetPrice() + "\n");
-            System.Console.WriteLine("\t\t " + aircoCar.GetDescription() + "\n");
-
-            System.Console.WriteLine("Regular car /w stereo: " + stereoCar.GetPrice() + "\n");
-            System.Console.WriteLine("\t\t " + stereoCar.GetDescription() + "\n");
-
-            System.Console.WriteLine("Regular car /w both: " + bothOptions.GetPrice() + "\n");
-            System.Console.WriteLine("\t\t " + bothOptions.GetDescription() + "\n");
-
-
+            Airco stereoAircoCar = new Airco(stereoCar);
+            System.Console.WriteLine("4: " + stereoAircoCar.GetDescription());
+            System.Console.WriteLine("$: " + stereoAircoCar.GetPrice());
 
             Console.ReadLine();
         }

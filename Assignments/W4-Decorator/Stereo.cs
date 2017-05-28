@@ -7,19 +7,21 @@ namespace W4_Decorator
 {
     class Stereo : CarDecorator
     {
+        private ICar car;
+
         public Stereo(ICar car) : base(car)
         {
-
+            this.car = car;
         }
 
-        public new double GetPrice()
+        public override double GetPrice()
         {
-            return base.GetPrice() + 1500.00;
+            return car.GetPrice() + 1500.00;
         }
 
-        public new string GetDescription()
+        public override string GetDescription()
         {
-            return base.GetDescription() + " /w Stereo";
+            return car.GetDescription() + " + stereo";
         }
 
         public string PlayMusic()

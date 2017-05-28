@@ -7,19 +7,26 @@ namespace W4_Decorator
 {
     class Navigation : CarDecorator
     {
-        public Navigation(Car car) : base(car)
+        private ICar car;
+
+        public Navigation(ICar car) : base(car)
         {
-            
+            this.car = car;
         }
 
-        public new double GetPrice()
+        public override double GetPrice()
         {
-            return base.GetPrice() + 200.00;
+            return car.GetPrice() + 200.00;
         }
 
-        public new string GetDescription()
+        public override string GetDescription()
         {
-            return "With navigation";
+            return car.GetDescription() + " + navigation";
+        }
+
+        public string Navigate()
+        {
+            return "Navigating...";
         }
     }
 }
