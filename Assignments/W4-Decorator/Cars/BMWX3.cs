@@ -5,25 +5,26 @@ using System.Text;
 
 namespace W4_Decorator
 {
-    class RegularCar : ICar
+    class BMWX3 : ICar
     {
+
         private string description;
         private double price;
 
-        public RegularCar()
+        public BMWX3()
         {
-            description = "Regular car";
-            price = 20000.00;
-        }
-
-        public double GetPrice()
-        {
-            return price;
+            description = "BMW X3";
+            price = 150000.00;
         }
 
         public string GetDescription()
         {
             return description;
+        }
+
+        public double GetPrice()
+        {
+            return price;
         }
     }
 }

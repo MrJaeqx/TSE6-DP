@@ -9,7 +9,7 @@ namespace W4_Decorator
     {
         private ICar car;
 
-        public CarDecorator(ICar car)
+        protected CarDecorator(ICar car)
         {
             this.car = car;
         }
