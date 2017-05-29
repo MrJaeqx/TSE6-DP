@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W3-AbstractFactory", "W3-Ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W4-Decorator", "W4-Decorator\W4-Decorator.csproj", "{DC84FE18-2CD3-4248-A6ED-12126469140D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W5-Command", "W5-Command\W5-Command.csproj", "{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC84FE18-2CD3-4248-A6ED-12126469140D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
