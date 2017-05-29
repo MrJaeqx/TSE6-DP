@@ -11,6 +11,6 @@ UML designs TSE6-DP
   
 ## Assignment 4: Decorator  
 ![Decorator classes](W4-Decorator.png)  
-
-## Assignment 5: --
-todo  
+  
+## Assignment 5: Command  
+![Command classes](W4-Command.png)  
