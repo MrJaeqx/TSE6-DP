@@ -13,4 +13,4 @@ UML designs TSE6-DP
 ![Decorator classes](W4-Decorator.png)  
   
 ## Assignment 5: Command  
-![Command classes](W4-Command.png)  
+![Command classes](W5-Command.png)  
