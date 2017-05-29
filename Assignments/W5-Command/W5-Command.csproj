@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add.cs" />
-    <Compile Include="Divide.cs" />
-    <Compile Include="ICallback.cs" />
+    <Compile Include="Calculations\Add.cs" />
+    <Compile Include="Calculations\Divide.cs" />
+    <Compile Include="Calculations\ICallback.cs" />
     <Compile Include="Invoker.cs" />
-    <Compile Include="Multiply.cs" />
+    <Compile Include="Calculations\Multiply.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receiver.cs" />
-    <Compile Include="Substract.cs" />
+    <Compile Include="Calculations\Substract.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

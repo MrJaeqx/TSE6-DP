@@ -9,22 +9,22 @@ namespace W5_Command
     {
         public void Add(int a, int b)
         {
-            Console.WriteLine("Result: " + (a + b));;
+            Console.WriteLine(a + " + " + b + " = " + (a + b));;
         }
 
         public void Substract(int a, int b)
         {
-            Console.WriteLine("Result: " + (a - b)); ;
+            Console.WriteLine(a + " - " + b + " = " + (a - b)); ;
         }
 
         public void Multiply(int a, int b)
         {
-            Console.WriteLine("Result: " + (a * b)); ;
+            Console.WriteLine(a + " * " + b + " = " + (a * b)); ;
         }
 
         public void Divide(int a, int b)
         {
-            Console.WriteLine("Result: " + (a / b)); ;
+            Console.WriteLine(a + " / " + b + " = " + (a / b)); ;
         }
     }
 }
