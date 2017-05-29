@@ -88,6 +88,15 @@ namespace W5_Command
                 {
                     correctParse = true;
                 }
+
+                if (!correctParse || !validOperator)
+                {
+                    Console.WriteLine("Syntax error");
+                }
+                else
+                {
+                    Console.WriteLine("Added operation");
+                }
             } while (!correctParse || !validOperator);
 
 
