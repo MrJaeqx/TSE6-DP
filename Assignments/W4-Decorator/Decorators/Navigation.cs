@@ -23,10 +23,5 @@ namespace W4_Decorator
         {
             return car.GetDescription() + " + navigation";
         }
-
-        public string Navigate()
-        {
-            return "Navigating...";
-        }
     }
 }

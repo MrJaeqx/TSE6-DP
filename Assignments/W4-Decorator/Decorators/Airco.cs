@@ -23,10 +23,5 @@ namespace W4_Decorator
         {
             return car.GetDescription() + " + airco";
         }
-
-        public string Chill()
-        {
-            return "Setting to 16c";
-        }
     }
 }

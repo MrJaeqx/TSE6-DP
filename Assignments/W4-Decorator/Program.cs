@@ -33,20 +33,42 @@ namespace W4_Decorator
                 Console.WriteLine("{0, -32}{1, 10}", i + ". "+ car.GetDescription(), "$" + car.GetPrice());
                 i++;
             }
-            Console.WriteLine("Press a number to select a car.");
-            ConsoleKeyInfo key = Console.ReadKey();
-            ICar selectedCar = baseCars[Convert.ToInt32(key.KeyChar.ToString())];
+
+            int carChoice;
+            bool correctCar = false;
+            do
+            {
+                Console.WriteLine("Press a number to select a car.");
+                ConsoleKeyInfo key = Console.ReadKey();
+                if (!Int32.TryParse(key.KeyChar.ToString(), out carChoice) || carChoice >= baseCars.Count)
+                {
+                    Console.WriteLine("Invalid choice, try again");
+                }
+                else
+                {
+                    correctCar = true;
+                }
+            } while (!correctCar);
+           
+            ICar selectedCar = baseCars[carChoice];
+
+            decorators.Add(new Airco(selectedCar));
+            decorators.Add(new BikeRack(selectedCar));
+            decorators.Add(new Navigation(selectedCar));
+            decorators.Add(new RallyEdition(selectedCar));
+            decorators.Add(new Stereo(selectedCar));
+            decorators.Add(new Towhook(selectedCar));
 
             int options = 0;
             while (true)
             {
-                decorators.Clear();
-                decorators.Add(new Airco(selectedCar));
-                decorators.Add(new BikeRack(selectedCar));
-                decorators.Add(new Navigation(selectedCar));
-                decorators.Add(new RallyEdition(selectedCar));
-                decorators.Add(new Stereo(selectedCar));
-                decorators.Add(new Towhook(selectedCar));
+                List<CarDecorator> newDecorators = new List<CarDecorator>();
+                newDecorators.Add(new Airco(selectedCar));
+                newDecorators.Add(new BikeRack(selectedCar));
+                newDecorators.Add(new Navigation(selectedCar));
+                newDecorators.Add(new RallyEdition(selectedCar));
+                newDecorators.Add(new Stereo(selectedCar));
+                newDecorators.Add(new Towhook(selectedCar));
 
                 Console.Clear();
                 i = 0;
@@ -55,14 +77,21 @@ namespace W4_Decorator
                     Console.WriteLine("{0, -48}{1, 20}", i + ". " + decorator.GetDescription(), "$" + decorator.GetPrice());
                     i++;
                 }
-                Console.WriteLine("Press a number to select an option, or ESC to quit.");
-                key = Console.ReadKey();
+                Console.WriteLine("Current choice: " + selectedCar.GetDescription() + " $" + selectedCar.GetPrice());
+                Console.WriteLine("Press a number to select an option, or Enter to check out.");
+                ConsoleKeyInfo key = Console.ReadKey();
 
-                if (key.Key == ConsoleKey.Escape || options > 3)
+                if (key.Key == ConsoleKey.Escape || key.Key == ConsoleKey.Enter)
                 {
                     break;
                 }
-                selectedCar = decorators[Convert.ToInt32(key.KeyChar.ToString())];
+                int decoratorChoice;
+                if (!Int32.TryParse(key.KeyChar.ToString(), out decoratorChoice) || decoratorChoice >= decorators.Count)
+                {
+                    Console.WriteLine("Invalid choice, try again");
+                    continue;
+                }
+                selectedCar = newDecorators[decoratorChoice];
                 options++;
             }
 

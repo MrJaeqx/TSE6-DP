@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W4-Decorator", "W4-Decorato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W5-Command", "W5-Command\W5-Command.csproj", "{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W5-Builder", "W5-Builder\W5-Builder.csproj", "{8E6F5506-EA3F-4E0F-801B-5AB2D08A2BE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBFEDE91-E28E-4032-A16D-F91383BD9BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6F5506-EA3F-4E0F-801B-5AB2D08A2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6F5506-EA3F-4E0F-801B-5AB2D08A2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6F5506-EA3F-4E0F-801B-5AB2D08A2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6F5506-EA3F-4E0F-801B-5AB2D08A2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

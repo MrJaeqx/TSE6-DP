@@ -23,10 +23,5 @@ namespace W4_Decorator
         {
             return car.GetDescription() + " + stereo";
         }
-
-        public string PlayMusic()
-        {
-            return "Playing music";
-        }
     }
 }
