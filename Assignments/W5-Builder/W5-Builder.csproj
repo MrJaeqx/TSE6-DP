@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesktopBuilder.cs" />
+    <Compile Include="LaptopBuilder.cs" />
+    <Compile Include="PC.cs" />
+    <Compile Include="PCBuilder.cs" />
+    <Compile Include="PCShop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
