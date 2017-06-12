@@ -8,10 +8,10 @@ namespace W5_Command
     class Add : ICallback
     {
         private Receiver _receiver;
-        private int _a;
-        private int _b;
+        private double _a;
+        private double _b;
 
-        public Add(Receiver receiver, int a, int b)
+        public Add(Receiver receiver, double a, double b)
         {
             _receiver = receiver;
             _a = a;

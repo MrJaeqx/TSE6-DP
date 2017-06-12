@@ -3,10 +3,10 @@
     public class Substract : ICallback
     {
         private Receiver _receiver;
-        private int _a;
-        private int _b;
+        private double _a;
+        private double _b;
 
-        public Substract(Receiver receiver, int a, int b)
+        public Substract(Receiver receiver, double a, double b)
         {
             _receiver = receiver;
             _a = a;

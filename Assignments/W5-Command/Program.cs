@@ -24,7 +24,7 @@ namespace W5_Command
             Console.WriteLine("Three empty lines will stop the program and show results.");
 
 
-            int arg1, arg2;
+            double arg1, arg2;
 
             string calcOperator = "";
 
@@ -52,7 +52,7 @@ namespace W5_Command
             Console.ReadLine();
         }
 
-        private static string CalcOperator(out int arg1, out int arg2)
+        private static string CalcOperator(out double arg1, out double arg2)
         {
             string calcOperator;
             bool correctParse = false;
@@ -81,8 +81,8 @@ namespace W5_Command
                         validOperator = true;
                 }
                 
-                bool arg1Correct = TryParse(rawarg1, out arg1);
-                bool arg2Correct = TryParse(rawarg2, out arg2);
+                bool arg1Correct = double.TryParse(rawarg1, out arg1);
+                bool arg2Correct = double.TryParse(rawarg2, out arg2);
                 
                 if (arg1Correct && arg2Correct)
                 {

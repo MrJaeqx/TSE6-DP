@@ -3,10 +3,10 @@
     public class Divide : ICallback
     {
         private Receiver _receiver;
-        private int _a;
-        private int _b;
+        private double _a;
+        private double _b;
 
-        public Divide(Receiver receiver, int a, int b)
+        public Divide(Receiver receiver, double a, double b)
         {
             _receiver = receiver;
             _a = a;
