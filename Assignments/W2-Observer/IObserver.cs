@@ -8,7 +8,5 @@ namespace StockMarket
     interface IObserver
     {
         void Update();
-
-        void UpdatePush(StockState s);
     }
 }

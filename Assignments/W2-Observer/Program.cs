@@ -10,18 +10,13 @@ namespace StockMarket
     {
         static void Main(string[] args)
         {
-            StockState state = new StockState();
-            ISubject stockSubject = new StockSubject(state);
+            StockSubject stockSubject = new StockSubject();
+            
+            stockSubject.Attach(new PhoneObserver(stockSubject));
+            stockSubject.Attach(new MatrixBoardObserver(stockSubject));
+            stockSubject.Attach(new NewspaperObserver(stockSubject));
 
-            IObserver phoneObserver = new PhoneObserver(stockSubject);
-            IObserver matrixObserver = new MatrixBoardObserver(stockSubject);
-            IObserver newspaperObserver = new NewspaperObserver(stockSubject);
-
-            stockSubject.Attach(phoneObserver);
-            stockSubject.Attach(matrixObserver);
-            stockSubject.Attach(newspaperObserver);
-
-            Console.WriteLine("Press ESC to exit, 1 to add an observer, 2 to remove an observer");
+            Console.WriteLine("Press ESC to exit, 1 to add a random observer, 2 to remove an observer");
 
             int i = 0;
             while (true)
@@ -32,12 +27,12 @@ namespace StockMarket
                     if (key == ConsoleKey.Escape)
                         return;
                     else if (key == ConsoleKey.D1)
-                        addObserver(ref stockSubject);
+                        addObserver(stockSubject);
                     else if (key == ConsoleKey.D2)
-                        deleteObserver(ref stockSubject);
+                        deleteObserver(stockSubject);
                 }
 
-                state.SetStringThing("Tick: " + i);
+                stockSubject.SetState("Tick: " + i);
                 stockSubject.Notify();
                 Thread.Sleep(500);
                 i++;
@@ -45,7 +40,7 @@ namespace StockMarket
         }
 
         // Adds random observer
-        static private void addObserver(ref ISubject s)
+        private static void addObserver(StockSubject s)
         {
             Random rand = new Random();
             int choice = rand.Next(1, 4);
@@ -71,13 +66,13 @@ namespace StockMarket
         }
 
         // Removes random observer
-        static private void deleteObserver(ref ISubject s)
+        static void deleteObserver(Subject s)
         {
             int count = s.GetObservers().Count;
             if (count == 0)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("doe ff nie niks verwijderen");
+                Console.WriteLine("Nothing to delete!");
                 return;
             }
             Random rand = new Random();

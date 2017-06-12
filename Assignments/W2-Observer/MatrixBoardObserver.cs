@@ -7,25 +7,17 @@ namespace StockMarket
 {
     class MatrixBoardObserver : IObserver
     {
-        private ISubject subject;
+        private StockSubject subject;
 
-        public MatrixBoardObserver(ISubject s)
+        public MatrixBoardObserver(StockSubject s)
         {
             subject = s;
         }
 
         public void Update()
         {
-
-            StockState state = subject.GetState();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Matrix zegt:   " + state.GetStringThing());
-        }
-
-        public void UpdatePush(StockState s)
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Matrix zegt:   " + s.GetStringThing());
+            Console.WriteLine("Matrix says:   " + subject.GetState());
         }
     }
 }

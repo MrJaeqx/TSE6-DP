@@ -5,44 +5,18 @@ using System.Text;
 
 namespace StockMarket
 {
-    class StockSubject : ISubject
+    class StockSubject : Subject
     {
-        public List<IObserver> observers = new List<IObserver>();
-        private StockState stockState;
+        private string state = "Invalid";
 
-        public StockSubject(StockState s)
+        public void SetState(string s)
         {
-            stockState = s;
+            state = s;
         }
 
-        public void Attach(IObserver o)
+        public string GetState()
         {
-            observers.Add(o);
-        }
-
-        public void Detach(IObserver o)
-        {
-            observers.Remove(o);
-        }
-
-        public void Notify()
-        {
-            foreach(IObserver o in observers)
-            {
-                o.Update();
-                // stel dat je data is veranderd, dan dit
-                o.UpdatePush(stockState);
-            }
-        }
-
-        public StockState GetState()
-        {
-            return stockState;
-        }
-
-        public List<IObserver> GetObservers()
-        {
-            return observers;
+            return state;
         }
     }
 }

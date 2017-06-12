@@ -7,24 +7,17 @@ namespace StockMarket
 {
     class PhoneObserver : IObserver
     {
-        private ISubject subject;
+        private StockSubject subject;
 
-        public PhoneObserver(ISubject s)
+        public PhoneObserver(StockSubject s)
         {
-            this.subject = s;
+            subject = s;
         }
 
-        public void Update()
-        {
-            StockState state = subject.GetState();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Telefoon zegt: " + state.GetStringThing());
-        }
-
-        public void UpdatePush(StockState s)
+        public  void Update()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Telefoon zegt: " + s.GetStringThing());
+            Console.WriteLine("Phone says:   " + subject.GetState());
         }
     }
 }

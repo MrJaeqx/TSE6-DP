@@ -7,24 +7,17 @@ namespace StockMarket
 {
     class NewspaperObserver : IObserver
     {
-        private ISubject subject;
+        private StockSubject subject;
 
-        public NewspaperObserver(ISubject s)
+        public NewspaperObserver(StockSubject s)
         {
             subject = s;
         }
 
         public void Update()
         {
-            StockState state = subject.GetState();
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Krant zegt:    " + state.GetStringThing());
-        }
-
-        public void UpdatePush(StockState s)
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Krant zegt:    " + s.GetStringThing());
+            Console.WriteLine("News says:   " + subject.GetState());
         }
 
     }
